@@ -8,7 +8,7 @@
     "build": "eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Melissa Gattoni",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1"
