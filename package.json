@@ -2,7 +2,7 @@
   "name": "meligatt-portfolio-2024",
   "version": "1.0.0",
   "description": "my online portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "build": "npx @11ty/eleventy",
 		"start": "npx @11ty/eleventy --serve --quiet"
