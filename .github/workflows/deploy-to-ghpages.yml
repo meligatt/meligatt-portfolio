@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies & build
         run: |
             npm install
-            npm @11ty/eleventy
+            npm build
       - uses: actions/upload-pages-artifact@v2
 
       - name: upload static site content
