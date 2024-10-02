@@ -4,30 +4,43 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
     <body>
-        <header>
-            <h1>
-                title goes here...
-              {{ title }}
-            </h1>
-            <main>
-                content goes here...
-              {{ content | safe }}
-            </main>
-        </header>
-
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+   <a href="#skip">Skip to main content</a>
+		<header>
+			<a href="/">{{ metadata.title }}</a>
+			
+			<nav>
+				<ul>
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li>
+            <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>
+              {{ entry.title }}
+            </a>
+					</li>
+				{%- endfor %}
+				</ul>
+			</nav>
+      
+		</header>
+    <main id="skip">
         
-        <script src="" async defer></script>
-    </body>
+      <h1>{{ title }}</h1>
+        
+      {{ content | safe }}
+    </main>
+
+  <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <script src="" async defer></script>
+  </body>
 </html>
