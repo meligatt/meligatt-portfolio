@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{ metadata.title }}</title>
+    <title>{{ title }}</title>
     <meta name="description" content="{{  metadata.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <a href="#skip">Skip to main content</a>
     <header>
       <nav>
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
       </nav>
     </header>
     <main id="skip">
-      <h1>{{ metadata.title }}</h1>
       {{ content }}
     </main>
   </body>
